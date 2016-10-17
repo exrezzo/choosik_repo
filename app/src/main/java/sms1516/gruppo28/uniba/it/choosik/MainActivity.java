@@ -17,7 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -80,31 +80,31 @@ public class MainActivity extends Activity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        boolean status=false;
-        FragmentManager fragmentManager=getFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_concert) {
-            Fragment f1=new FragmentOne();
-            fragmentTransaction.add(R.id.fragment_conteiner,f1);
-            fragmentTransaction.commit();
-            status=true;
-
-        } else if (id == R.id.nav_home) {
-
-        } else if (id == R.id.nav_about) {
-
-        } else if (id == R.id.nav_send) {
-
-        } else if (id == R.id.nav_search) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+//    public boolean onNavigationItemSelected(MenuItem item) {
+//        boolean status=false;
+//        FragmentManager fragmentManager=getFragmentManager();
+//        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+//        // Handle navigation view item clicks here.
+//        int id = item.getItemId();
+//
+//        if (id == R.id.nav_concert) {
+//            Fragment f1=new FragmentOne();
+//            fragmentTransaction.add(R.id.fragment_conteiner,f1);
+//            fragmentTransaction.commit();
+//            status=true;
+//
+//        } else if (id == R.id.nav_home) {
+//
+//        } else if (id == R.id.nav_about) {
+//
+//        } else if (id == R.id.nav_send) {
+//
+//        } else if (id == R.id.nav_search) {
+//
+//        }
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
 }
