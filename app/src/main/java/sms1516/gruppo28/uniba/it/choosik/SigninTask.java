@@ -42,15 +42,12 @@ public class SigninTask extends AsyncTask<String,Void,String> {
             BufferedReader in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 
             StringBuffer sb = new StringBuffer("");
-            Log.d("ciao", sb.toString());
             String line="";
 
             while ((line = in.readLine()) != null) {
                 sb.append(line);
                 break;
             }
-            Log.d("stringbuffer", sb.toString());
-            Log.d("coglione"," trimone");
             in.close();
             return sb.toString();
         }
