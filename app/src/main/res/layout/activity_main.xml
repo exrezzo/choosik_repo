@@ -21,5 +21,15 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        andro android:id="@+id/fragment_conteiner"
+
+
+
+
+    />
 
 </android.support.v4.widget.DrawerLayout>
