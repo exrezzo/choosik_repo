@@ -2,6 +2,7 @@ package sms1516.gruppo28.uniba.it.choosik;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -28,7 +29,10 @@ public class SigninTask extends AsyncTask<String,Void,String> {
         try{
             String username = (String)arg0[0];
             String password = (String)arg0[1];
-            String link = "http://myphpmysqlweb.hostei.com/login.php?username="+username+"& password="+password;
+
+            Log.d("usr",username);
+            Log.d("psw",password);
+            String link = "http://gruppotamma.esy.es/login.php?username='"+username+"'&password='"+password + "'";
 
             URL url = new URL(link);
             HttpClient client = new DefaultHttpClient();
@@ -38,12 +42,15 @@ public class SigninTask extends AsyncTask<String,Void,String> {
             BufferedReader in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 
             StringBuffer sb = new StringBuffer("");
+            Log.d("ciao", sb.toString());
             String line="";
 
             while ((line = in.readLine()) != null) {
                 sb.append(line);
                 break;
             }
+            Log.d("stringbuffer", sb.toString());
+            Log.d("coglione"," trimone");
             in.close();
             return sb.toString();
         }

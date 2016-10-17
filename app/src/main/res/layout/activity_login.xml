@@ -19,7 +19,7 @@
         android:layout_marginTop="85dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Username" />
+        android:text="micheletamma" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_below="@+id/txtUser"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Password" />
+        android:text="michele" />
 
     <Button
         android:layout_width="wrap_content"

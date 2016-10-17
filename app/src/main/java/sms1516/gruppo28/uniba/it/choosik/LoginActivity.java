@@ -18,14 +18,18 @@ public class LoginActivity extends AppCompatActivity {
         usernameField = (EditText)findViewById(R.id.txtUser);
         passwordField = (EditText)findViewById(R.id.txtPassword);
         final Button loginbtn = (Button) findViewById(R.id.loginbtn);
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
-                //controllo credenziali login
+        loginbtn.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v)
+                {   login(v);
+
+                    // Perform action on click
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+                    //controllo credenziali login
+                }
             }
-        });
+             );
 
 
     }
